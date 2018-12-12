@@ -1,0 +1,273 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.hashworks--prd{
+    .button{
+        display: inline;
+        text-align: center;
+    }
+    button[disabled] {
+        cursor: not-allowed;
+        background-color: #ccc;
+    }
+    .hashworks--paketo {
+        background-image: url("/assets/img/service/hashworks--paketo.jpg");
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: cover;
+        padding: 56px 0px;
+        &--web {
+            width: 274px;
+            margin: 0px auto;
+            img {
+                width: 99px;
+                height: 68px;
+            }
+            h1 {
+                color: #ffffff;
+                padding: 32px 0px 8px;
+            }
+            p {
+                color: #ffffff;
+                padding-bottom: 24px;
+            }
+        }
+    }
+    
+    .hash--border {
+        width: 289px;
+        height: 1px;
+        background-color: #eaeaea;
+        margin: 0 auto;
+    }
+    
+    .hashworks--eco {
+        padding: 32px 35px;
+        // width: 250px;
+         margin: 0 auto;
+        text-align: center;
+    }
+    
+    .hashworks--eSystm {
+        padding: 32px 0px 72px;
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        .hashworks--list {
+            &-tabs {
+                width: 220px;
+                margin: 0px auto;
+                img {
+                    width: 75px;
+                    height: 75px;
+                    margin: 24px 0px 8px;
+                }
+            }
+        }
+    }
+    
+    .hashworks--hashhelp {
+        padding: 16px 0px 40px;
+    }
+    
+}
+
+@media only screen and (min-width:768px) {
+    .hashworks--prd{
+    .hashworks--paketo {
+        padding: 64px 0px;
+        &--web {
+            width: 700px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            h1 {
+                padding: 0px 0px 8px;
+            }
+            p {
+                padding-bottom: 0px;
+            }
+            img {
+                width: 99px;
+                height: 68px;
+                margin-left: 60px;
+            }
+            &--build {
+                width: 280px;
+            }
+        }
+    }
+    .hash--border {
+        width: 700px;
+    }
+    .hashworks--eco {
+        padding: 48px 0px;
+        width: 700px;
+    }
+    .hashworks--list {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .hashworks--list::after {
+        content: '';
+        width: 462px;
+        height: 1px;
+        background-color: #603d97;
+        position: absolute;
+        top: 45px;
+        left: 137px;
+        z-index: -1;
+    }
+    .hashworks--eSystm {
+        padding: 48px 0px 88px;
+        width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        h1 {
+            padding-bottom: 32px;
+        }
+        .hashworks--list {
+            &-tabs {
+                img {
+                    width: 90px;
+                    height: 90px;
+                    margin: 0px;
+                }
+                p {
+                    padding-top: 8px;
+                }
+            }
+        }
+    }
+    .hashworks--hashhelp {
+        padding: 40px 0px 40px;
+    }
+}
+}
+@media only screen and (min-width:1024px) {
+    .hashworks--prd{
+
+    .hashworks--paketo {
+        padding: 72px 0px;
+        background-attachment: fixed;        
+        &--web {
+            width: 940px;
+            h1 {
+                padding: 0px 0px 16px;
+            }
+            img {
+                width: 139px;
+                height: 96px;
+                margin-left: 10px;
+            }
+            .arow{
+                width: 25px;
+                height: 20px;
+                margin: 0;
+            }
+         
+            &--build {
+                width:420px;
+            }
+        }
+    }
+    .hash--border {
+        width: 940px;
+    }
+    .hashworks--eco {
+        padding: 64px 0px;
+        width: 940px;
+    }
+
+    .hashworks--list::after {
+        width: 651px;
+        top: 57px;
+        left: 137px;
+    }
+    .hashworks--eSystm {
+        padding: 64px 0px 104px;
+        width: 940px;
+        h1 {
+            padding-bottom: 40px;
+        }
+        .hashworks--list {
+            &-tabs {
+                width: 300px;
+                margin: 0;
+                img {
+                    width: 116px;
+                    height:116px;
+                }
+                p {
+                    padding-top: 24px;
+                }
+            }
+        }
+    }
+    .hashworks--hashhelp {
+        padding: 64px 0px;
+    }
+}
+}
+@media only screen and (min-width:1440px) {
+    .hashworks--prd{
+    .hashworks--paketo {
+        padding: 84px 0px 76px;
+        &--web {
+            width: 1170px;
+            h1 {
+                padding: 0px 0px 24px;
+            }
+            img {
+                width: 170px;
+                height: 117px;
+                margin-left: 100px;
+            }
+         
+            &--build {
+                width:500px;
+            }
+        }
+    }
+    .hash--border {
+        width: 1170px;
+    }
+    .hashworks--eco {
+        padding: 80px 0px;
+        width: 1170px;
+    }
+
+    .hashworks--list::after {
+        width: 830px;
+        top: 57px;
+        left: 137px;
+    }
+    .hashworks--eSystm {
+        padding: 64px 0px 104px;
+        width: 1130px;
+        h1 {
+            padding-bottom: 48px;
+        }
+        .hashworks--list {
+            &-tabs {
+                width: 330px;
+                img {
+                    width: 124px;
+                    height:124px;
+                }
+              
+            }
+        }
+    }
+    .hashworks--hashhelp {
+        padding: 80px 0px;
+    }
+}
+}

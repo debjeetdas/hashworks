@@ -1,0 +1,34 @@
+<div class="hashworks--boot">
+    <div class="hashworks--exService">
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="buttonColor dropdown-toggle " aria-controls="dropdown-basic" (click)="filterselect('All','All' ,'1')">{{param}}
+          <span class="caret"></span>
+        </button>
+        <ul class=" dropdown-menu hashworks--exService--list" id="dropdown-basic" *dropdownMenu role="menu" aria-labelledby="button-basic">
+            <li class="bodySemiBold" [ngClass]="{'active': selectedItem == 1}" (click)="filterselect('All','All', '1')">All</li>
+            <li class="bodySemiBold" [ngClass]="{'active': selectedItem == 2}" (click)="filterselect('DevOps','DevOps', '2')" value="DevOps">DevOps</li>
+          </ul>
+      </div>
+      
+    <div class="hashworks--flList">
+        <div class="col-xs-12 col-sm-6 devops cardhover"  *ngFor="let item of bootCampData;">
+            <a href = "{{item.urllink}}" target = "{{item.target}}">
+            
+          <div  [ngStyle]="{'background-image': 'url('+item.activeImage+')'}"  class="filterimage" >
+              <div [ngStyle]="{'background-color': item.color}" class="bgcolor"></div>
+            <h2 class="bodyBold">{{item.title}}</h2>
+            <h1 class ="title">{{item.hero}}</h1>
+            <p class="bodyLight">{{item.text}}</p>
+            <div class="knowMore">
+              <button class="button">
+                <span><img src="../../assets/img/home/service/hashworks-blkarw.svg" alt=""></span>
+                <span>Know More</span>
+              </button>
+          </div>
+          </div>
+        </a>
+        </div>
+        <div>
+  </div>
+</div>
+

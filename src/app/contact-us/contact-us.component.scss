@@ -1,0 +1,247 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.hashworks--contact{
+.hashworks--con{
+    background-color: #603d97;
+    text-align: center;
+    padding: 32px 37px;
+    h1{
+        color: #ffffff;
+    }
+    p,a{
+        color: #ffffff;
+        margin: 16px 0px 32px;
+    }
+    h2{
+        color: #ffffff;
+        padding-top: 16px;
+    }
+}
+.knowMore{
+    display: flex;
+    justify-content: center;
+}
+.hashworks--join{
+    padding: 32px 0px 16px;
+}
+.hashworks--help{
+    padding-bottom: 40px;
+}
+.hashworks--form{
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 32px;
+    h1{
+        padding-bottom: 24px;
+    }
+    
+    input{
+        width: 279px;
+       padding: 8px 16px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: solid 1px #ebebeb;
+        outline: none;
+        line-height: 24px;
+        margin-bottom: 16px;
+        position: relative;
+    }
+
+    .errorValidator{
+        border-color: #f05844;
+    }.caution{
+        color: #f05844;
+    }
+    textarea{
+        width: 279px;
+        height: 92px;
+        padding: 14px 18px;
+        border: solid 1px #ebebeb;
+        border-radius: 4px;
+        outline: none;
+        resize: none;
+        margin-left: 5px;
+    }
+    button{
+        margin-top: 24px;
+    }
+}
+}
+
+//popup css
+.hashworks--sign{
+    text-align: center;
+    margin: 34px 0px 0px;
+}
+  .cross{
+    margin: 0px !important;
+  }
+  .profile{
+    padding: 20px 3px 70px 3px !important;
+    text-align: center;
+    p{
+        padding: 16px 0px 0px;
+    }
+  }
+@media only screen and (min-width:768px){
+    .hashworks--contact{
+        .hashworks--large{
+            display: flex;
+            justify-content: space-between;
+        }
+        .hashworks--con{
+           
+            text-align: left;
+            padding: 40px 53px  40px 34px;
+          
+            p{
+                margin: 16px 0px 0px;
+            }
+            h2{
+                padding-top: 16px;
+            }
+            &--add{
+                width: 339px;
+            }
+        }
+        .hashworks--form{
+            width: 580px;
+            padding-top: 40px;
+            h1{
+                padding-bottom: 32px;
+            }
+            input{
+                margin-bottom: 16px;
+            }
+            textarea{
+                width: 570px;
+                margin: 0px;
+            }
+            button{
+               margin-top:32px;
+            }
+            &--input{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .hashworks--join{
+            padding: 40px 0px 40px;
+        }
+        .hashworks--help{
+            padding-bottom: 40px;
+        }
+        }
+        .profile{
+            padding: 24px 25px 70px 25px !important;
+          }
+}
+@media only screen and (min-width:1024px){
+    .hashworks--contact{
+        .hashworks--con{
+            padding: 56px 0px  56px 0px;
+            .hashworks--large{
+                width:925px;
+                margin:0 auto;
+            }
+            &--add{
+                width: 460px;
+            }
+        }
+        .phone{
+            padding-left: 5px;
+        }
+        .hashworks--form{
+            width: 780px;
+            padding-top: 56px;
+            h1{
+                padding-bottom: 40px;
+            }
+            input{
+                width: 378px;
+                padding: 10px 16px;
+                margin-bottom: 24px;
+            }
+            textarea{
+                width: 770px;
+                height: 100px;
+            }
+            button{
+               margin-top:40px;
+            }
+        }
+        .hashworks--join{
+            padding: 64px 0px;
+        }
+        .hashworks--help{
+            padding-bottom: 66px;
+        }
+        }
+        .hashworks--sign{
+            margin:42px 0px 0px;
+        }
+          .profile{
+            padding: 24px 55px 80px 55px !important;
+            p{
+                padding: 24px 0px 0px;
+            }
+          }
+}
+@media only screen and (min-width:1440px){
+    .hashworks--contact{
+       
+        .hashworks--con{
+            padding: 80px 0px  80px 0px;
+            .hashworks--large{
+                width: 1150px;
+                margin: 0 auto;
+            }
+            p{
+                margin: 16px 0px 0px;
+            }
+            &--add{
+                width: 570px;
+            }
+        }
+        .hashworks--form{
+            width: 972px;
+            padding-top: 80px;
+            h1{
+                padding-bottom: 48px;
+            }
+            input{
+                width: 470px;
+                padding: 12px 16px;
+            }
+            textarea{
+                width: 960px;
+                height: 108px;
+            }
+            button{
+               margin-top:48px;
+            }
+        }
+        .hashworks--join{
+            padding: 80px 0px;
+        }
+        .hashworks--help{
+            padding-bottom: 80px;
+        }
+        }
+        .hashworks--sign{
+            margin:42px 0px 0px;
+        }
+          .profile{
+            padding: 32px 60px 88px 60px !important;
+            p{
+                padding: 32px 0px 0px;
+            }
+          }
+}

@@ -1,0 +1,337 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.hashworks--carrer{
+
+  &--bnr{
+    background-image: url('/assets/img/carrer/hashworks--carrer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 35px 40px 12px;
+   
+    h2,p,h1{
+      color: #ffffff;
+      text-align: center;
+    }
+    h2{
+      padding-bottom: 10px;
+    }
+    h1{
+      padding-top: 16px;
+    }
+    p{
+      position: relative;
+      padding: 0px 16px 0px 25px;
+    }
+    .quateslast{
+    float: right;;
+    }
+  }
+  .bnr2{
+    background-image: url('/assets/img/carrer/hashworks-bnr.jpg');
+    background-repeat: no-repeat;
+  }
+    .hashworks--exService {
+        text-align: center;
+        padding: 40px 0px;
+        ul {
+            list-style-type: none;
+        }
+        .button{
+          width: 199px;
+        }
+        &--list {
+            li {
+                cursor: pointer;
+                outline: none;
+                border-bottom: 1px solid #eaeaea;
+                margin: 0;
+                padding: 14px 20px;
+                position: relative;
+            }
+            .active {
+              color: #603c96;
+          }
+            .search{
+              display: none;
+            }
+
+        }
+        .hashworks--job{
+          width: 293px;
+          background-color: #ffffff;
+          border: solid 1px #dcdcdc;
+          margin: 24px auto;
+          // padding: 24px 0px 0px;
+          &--apply{
+            padding:24px 69px 0px;
+            &--date{
+              display: flex;
+              align-items: center;
+              padding: 8px 0px 0px;
+              justify-content: space-between;
+            }
+            button{
+              margin: 16px 0px 24px;
+              // padding: 14px 37px;
+            }
+          }
+        }
+    }
+    .hashworks--perk{
+      padding: 56px 38px 24px 36px;
+      text-align: center;
+      h1{
+        padding-bottom: 40px;
+      }
+      p{
+        padding: 16px 0px 32px;
+      }
+    }
+    &--help{
+      padding: 16px 0px 40px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+  .hashworks--carrer{
+    &--bnr{
+      padding:56px 34px 53px 34px;
+      h2{
+        padding-bottom: 10px;
+      }
+      p{
+        padding: 0px 16px 0px 25px;
+      }
+      .slideContent{
+        width: 500px;
+        margin: 0 auto;
+      }
+    
+    }
+    .bnr2{
+      padding:56px 34px 53px 34px;
+    }
+
+    .hashworks--exService {
+      padding: 64px 0px 53px;
+      &--list {
+          border: none;
+          box-shadow: none;
+          border-top: 1px solid #eaeaea;
+          border-bottom: 1px solid #eaeaea;
+          display: flex;
+          align-items: center;
+          padding: 13px 0px;
+          width: 620px;
+          margin: 0px auto;
+          li {
+              padding: 0px;
+              border: none;
+              &:hover {
+                  color: #603c96;
+              }
+          }
+          .all{
+          display: none;
+          }
+          input{
+            width: 279px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            border: solid 1px #ebebeb;
+            padding: 8px 16px;
+            outline: none;
+          }
+          img{
+            position: absolute;
+            right: 8px;
+            top: 4px;
+          }
+          .search{
+            display: block;
+          } 
+      }
+      .hashworks--job{
+        width: 620px;
+        padding: 18px 20px 8px 20px;
+        &--apply{
+          padding:0px 0px 18px 0px;
+          display: flex;
+          align-items: center;
+          &--date{
+            padding:0px;
+            width: 180px;;
+          }
+          h2{
+            width: 265px;
+            text-align: left;
+          }
+          button{
+            margin: 0px 0px 0px 50px;
+          }
+        }
+      }
+   
+      li:nth-child(2) {
+          border-right: 1px solid #eaeaea;
+          padding: 0px 16px 0px 0px
+      }
+      li:nth-child(3) {
+      
+        padding: 0px 155px 0px 16px
+    }
+  }
+  .hashworks--perk{
+    padding: 64px 34px 24px 33px;
+    text-align: center;
+    h1{
+      padding-bottom: 32px;
+    }
+    p{
+      padding: 24px 24px 40px 0px;
+      text-align: left;
+    }
+    h2{
+      text-align: left;
+    }
+  }
+  &--help{
+    padding: 40px 0px 40px;
+  }
+    }
+}
+
+@media only screen and (min-width:1024px) {
+  .hashworks--carrer{
+    &--bnr{
+      padding:72px 35px 72px 35px;
+    background-attachment: fixed;
+      
+      p{
+        padding:0px 5px 0px 13px;
+      }
+      .slideContent{
+        width:630px;
+      }
+    }
+    .bnr2{
+      padding:72px 0px 72px 0px;
+    background-attachment: fixed;
+      
+    }
+    .hashworks--exService {
+      padding: 72px 0px 72px;
+      &--list {
+          padding: 12px 0px 12px;
+          width: 820px;
+          input{
+            width: 378px;
+            padding: 10px 16px;
+          }
+          img{
+            top:6px;
+          }
+      }
+      .hashworks--job{
+        width: 820px;
+        &--apply{
+          padding:0px 0px 22px 0px;
+         justify-content: space-between;
+          &--date{
+            width: 240px;;
+          }
+          h2{
+            width:300px;
+          }
+
+        }
+      }
+      li:nth-child(3) {
+        padding: 0px 244px 0px 16px
+    }
+  }
+  .hashworks--perk{
+    padding: 72px 0px 32px 0px;
+    width: 940px;
+    margin: 0 auto;
+    h1{
+      padding-bottom: 40px;
+    }
+    p{
+      padding: 16px 0px 40px 0px;
+    }
+  }
+  &--help{
+    padding: 64px 0px;
+  }
+    }
+}
+
+@media only screen and (min-width:1440px) {
+  .hashworks--carrer{
+    &--bnr{
+      padding:80px 0px 80px 0px;
+   
+      .slideContent{
+        width:730px;
+        p{
+          padding: 0 0px 0px 13px;
+        }
+      }
+    }
+    .bnr2{
+      padding:80px 0px 80px 0px;
+    }
+    .hashworks--exService {
+      padding: 80px 0px 80px;
+      &--list {
+          padding: 13px 0px 13px;
+          width: 1032px;
+          input{
+            width:400px;
+            padding: 10px 16px;
+          }
+      }
+      .hashworks--job{
+        width:1032px;
+        padding: 32px;
+        &--apply{
+          padding:0px 0px 32px 0px;
+          &--date{
+            width: 280px;;
+          }
+          h2{
+            width:320px;
+          }
+
+        }
+      }
+      li:nth-child(2) {
+        padding: 0px 32px 0px 0px
+    }
+      li:nth-child(3) {
+        padding: 0px 370px 0px 32px
+    }
+  }
+  .hashworks--perk{
+    padding: 80px 0px 32px 0px;
+    width: 1180px;
+    margin: 0 auto;
+    h1{
+      padding-bottom: 48px;
+    }
+    p{
+      padding: 24px 18px 48px 0px;
+    }
+  }
+  &--help{
+    padding: 80px 0px;
+  }
+    }
+}

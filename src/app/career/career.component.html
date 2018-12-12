@@ -1,0 +1,99 @@
+<div class="hashworks--carrer">
+  <app-banner titleText="Join our team" text="Like all great companies, we endeavor to hire best talents valuing integrity, excellence, respect & collaboration. Attitude & skills we inculcate at work every day are : transparency & honesty in communication, speaking what is right & being prudent, emphatic and compassionate.
+  If you feel, any of this traits match your DNA and believe that these form of beliefs define your ecosystem, then Hashworks is where you need to be."></app-banner>
+
+  <div class="hashworks--carrer--bnr">
+    <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let slide1 of leader" class="slide">
+        <div class="slideContent">
+          <h2 class="subTitle">{{slide1.title}}</h2>
+          <img src="/assets/img/carrer/hashworks-quates0.svg" alt="hashworks">
+          <p class="bodyItalic">{{slide1.desc}}</p>
+          <img class="quateslast" src="/assets/img/carrer/hashworks-quates.svg" alt="hashworks">
+          <h1 class="bodyBold">{{slide1.name}}</h1>
+        </div>
+      </div>
+    </ngx-slick>
+  </div>
+  <div class="hashworks--exService carrerposition">
+    <div class="btn-group" dropdown>
+      <button id="button-basic" dropdownToggle type="button" class="button dropdown-toggle " aria-controls="dropdown-basic" (click)="filterselect('all','All','1')">
+        <span class="anim"></span>{{value.toUpperCase()}}
+        <span class="caret"></span>
+      </button>
+      <ul class=" dropdown-menu hashworks--exService--list " id="dropdown-basic" *dropdownMenu role="menu" aria-labelledby="button-basic">
+        <li class="bodySemiBold all" (click)="filterselect('all','ALL')">ALL</li>
+        <li class="bodySemiBold" [ngClass]="{'active': selectedItem == 1}" (click)="filterselect('CAREERS','CAREERS','1')">CAREERS</li>
+        <li class="bodySemiBold" [ngClass]="{'active': selectedItem == 2}" (click)="filterselect('INTERNSHIP','INTERNSHIP','2')">INTERNSHIP</li>
+        <li class="search">
+          <input (ngModelChange)="onSearch($event)" [(ngModel)]='term' class="bodyLight" type="search" name="googlesearch" placeholder="Search">
+          <img src="/assets/img/carrer/hashworks-search.svg" alt="">
+        </li>
+      </ul>
+    </div>
+    <div class="hashworks--job">
+      <h2 class="subTitle" *ngIf="noData">No data found</h2>
+      <h1 class="bodyLight" *ngIf="jobData.length==0">If you didn't find what you are looking for & are really keen to work with us, drop an email to our HR Team.
+      </h1>
+      <div class="hashworks--job--apply" *ngFor="let item of jobData; let i = index">
+        <h2 class="subTitle">{{item.designation}}</h2>
+        <div class="hashworks--job--apply--date">
+          <h3 class="bodyLight">{{item.date}}</h3>
+          <p class="bodyLight">{{item.place}}</p>
+        </div>
+        <button class="buttonColor" (click)="applyClick(i)">
+          <span>
+            <img src="../../assets/img/home/service/Arrow.svg" alt="">
+          </span>
+          <span>Apply</span>
+        </button>
+      </div>
+    </div>
+    <pagination [totalItems]="jobData.length" [itemsPerPage]="5" (pageChanged)="pageChanged($event)"></pagination>
+  </div>
+
+  <div class="hashworks--carrer--bnr bnr2">
+    <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let slide1 of employee" class="slide ">
+        <div class="slideContent">
+          <h2 class="subTitle">{{slide1.title}}</h2>
+          <img src="/assets/img/carrer/hashworks-quates0.svg" alt="hashworks">
+          <p class="bodyLight">{{slide1.desc}}</p>
+          <img class="quateslast" src="/assets/img/carrer/hashworks-quates.svg" alt="hashworks">
+          <h1 class="bodyBold">{{slide1.name}}</h1>
+        </div>
+      </div>
+    </ngx-slick>
+  </div>
+
+  <div class="hashworks--perk">
+    <h1 class="title">Perks & facility</h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <h2 class="subTitle">Paid Holidays</h2>
+        <p class="bodyLight">We encourage our employees to explore the world outside the four walls of office, and we make sure we have them covered under our paid holiday plans.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h2 class="subTitle">Intellect and Skill Development</h2>
+        <p class="bodyLight">We help our employees to grow and expand their skill sets through various knowledge sharing program and training session to accelerate their career growth. We also invite guest industry leaders for speaker sessions and mentor our talented minds.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h2 class="subTitle">Being Part of a Vibrant Community</h2>
+        <p class="bodyLight">We nurture and engage with our internal and external community through different community events providing all the employees a platform to interact and develope their own professional networks.</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <h2 class="subTitle">Collaborative & Fun Office Space</h2>
+        <p class="bodyLight">
+          We have all the coffee & tea that you can drink, covered on us. You can also relax as you work with Table Tennis and Foosball. We often party harder as we reach our milestones. </p>
+      </div>
+    </div>
+  </div>
+  <div class="hashworks--carrer--why">
+    <app-why-hashworks></app-why-hashworks>
+  </div>
+  <div class="hashworks--carrer--help">
+    <app-help></app-help>
+  </div>
+
+</div>

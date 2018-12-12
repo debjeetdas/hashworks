@@ -1,0 +1,46 @@
+
+
+<header class="header">
+    <div class="hashworks--header">
+    <img class="header__img" [routerLink]="['/']" src="/assets/img/icon/hashworks.svg" alt="hashworks">
+
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  
+  <ul class="header__tab menu">
+    <li> <button class="header__tab__button bodySemiBold"  (click)="closeMenu()" [routerLink]="['/product']" [routerLinkActive]="['selected']">Product</button></li>
+   <li><button class="header__tab__button bodySemiBold"  (click)="closeMenu()" [routerLink]="['/service']" [routerLinkActive]="['selected']">Services</button></li>
+    <li> <button class="header__tab__button bodySemiBold"  (click)="closeMenu()" [routerLink]="['/bootcamp']" [routerLinkActive]="['selected']">Bootcamps </button></li>
+   <li> <button class="header__tab__button bodySemiBold"  (click)="closeMenu()" [routerLink]="['/casestudy']" [routerLinkActive]="['selected']">Casestudies </button></li>
+   <li> <a href="https://medium.com/hashworks" target="_blank">
+      <button class="header__tab__button bodySemiBold"  (click)="closeMenu()" [routerLinkActive]="['selected']"> Blog </button>
+    </a></li>
+   <li> <button class="header__tab__button bodySemiBold"  (click)="closeMenu()" [routerLink]="['/about']" [routerLinkActive]="['selected']">About</button></li>
+    <li> <button class="header__tab__button bodySemiBold head"  (click)="closeMenu()" [routerLink]="['/career']" [routerLinkActive]="['selected']">Careers</button> </li>
+    <li><button class="header__tab__button bodySemiBold head"  (click)="closeMenu()" [routerLink]="['/demo']" [routerLinkActive]="['selected']">Demo</button> </li>
+  <li> <button class="header__tab__button bodySemiBold"  (click)="closeMenu()" [routerLink]="['/contact']" [routerLinkActive]="['selected']">
+    Contact Us</button></li>
+   <li> <div class="header__tab__button search dropdown">
+      <button class="dropbtn">
+        <img src="/assets/img/icon/hashworks-search.svg" alt="">
+      </button>
+      <div class="dropdown-content">
+        <form action="" method="GET">
+          <div class="google-media-search" [innerHTML]="gcsesearch" placeholder="Search"></div>
+        </form>
+      </div>
+      </div></li>
+      <div class="header__sLogo">
+          <a href="https://twitter.com/hashworksco" target="_blank">
+            <img src="/assets/img/icon/hashworks-twtr.svg" alt="hashworks">
+          </a>
+          <a href="https://www.linkedin.com/company/hashworks?trk=top_nav_home" target="_blank">
+            <img src="/assets/img/icon/hashworks-lkndn.svg" alt="hashworks">
+          </a>
+          <a href="https://www.facebook.com/hashworks" target="_blank">
+            <img src="/assets/img/icon/hashworks-fb.svg" alt="hashworks">
+          </a>
+        </div>
+  </ul>
+  </div>
+</header>

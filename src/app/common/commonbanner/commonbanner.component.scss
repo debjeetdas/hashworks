@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.home__grew {
+    text-align: center;
+    padding: 40px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // display: flex;
+    h1 {
+      color: #ffffff;
+      padding-bottom: 16px;
+      padding: 0px 15px 0px 15px;
+    }
+    a{
+      color: #393939;
+    }
+    p{
+      color: #ffffff;
+      padding: 16px 15px 0px 15px;
+    }
+    // &__button{
+    //   margin-top: 16px;
+    // }
+    button{
+      margin-top: 16px;
+    }
+    &__button{
+      display:flex;
+      justify-content:center;
+    }
+  }
+  @media only screen and (min-width:768px){
+    .home__grew {
+      p{
+        padding: 16px 117px 0px 117px;
+      }
+      h1{
+        padding: 0px 117px 0px 117px;
+      }
+    
+    }
+  }
+  @media only screen and (min-width:1024px){
+    .home__grew {
+      padding: 56px 0px;
+    background-attachment: fixed;
+      
+      h1 {
+        padding: 0;
+        width: 650px;
+        margin: 0 auto;
+      }
+      p{
+        padding: 24px 0px 0px 0px;
+        width:770px;
+        margin: 0 auto;
+      }
+    }
+    button{
+      margin-top: 24px;
+    }
+  }
+  @media only screen and (min-width:1440px){
+    .home__grew {
+      padding: 78px 0px;
+      h1 {
+        padding: 0px 0px 0px 0px;
+        margin: 0 auto;
+        width:770px;
+      }
+      p{
+        width:770px;
+        padding: 32px 0px 0px;
+        margin: 0 auto;
+      }
+    }
+   button{
+      margin-top: 32px;
+    }
+  }

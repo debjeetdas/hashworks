@@ -1,0 +1,50 @@
+<div class="hashworks--prd">
+        <app-banner titleText="Our Products" text="We meet high velocity, high performance needs of your organization. Our proven devops framework deliver high aggregated efficiency of agile teams."></app-banner>
+        <div class="hashworks--paketo">
+                <div class="hashworks--paketo--web" *ngFor="let item of productIteam">
+                        <img src="{{item.logo}}">
+                        <div class="hashworks--paketo--web--build">
+                                <h1 class="title">{{item.title}}</h1>
+                                <p class="bodyLight">{{item.productTitle}}</p>
+                        </div>
+                        <div>
+                                <button disabled class="button">Coming Soon</button>
+                        </div>
+                </div>
+        </div>
+        <div class="hashworks--eco">
+                <div class="hashworks--eco--service">
+                        <app-our-service titleText="Paketo product eco-system" titleSummary="We perfectly blend the application development and IT operations teams to deliver tangible piece of code, that is context driven and production ready with high velocity."></app-our-service>
+                </div>
+        </div>
+        <div class="hash--border"></div>
+        <div class="hashworks--eSystm">
+                <h1 class="title">Why we build products</h1>
+                <div class="hashworks--list">
+                        <div class="hashworks--list-tabs">
+                                <img src="/assets/img/product/hashworks-eco1.svg" alt="hashworks">
+                                <p class="bodyLight">We believe delivery velocity is key to sustain and grow any business. If work models can
+                                        be standardized and automated, teams will be able to achieve high delivery efficiency
+                                </p>
+                        </div>
+                        <div class="hashworks--list-tabs">
+                                <img src="/assets/img/product/hashworks-eco2.svg" alt="hashworks">
+                                <p class="bodyLight">Organizations are moving towards consumption based pricing models. There is a shift from
+                                        capital expenditure to operational expenditure to reduce risk, free-up capital &
+                                        offer flexibility </p>
+                        </div>
+                        <div class="hashworks--list-tabs">
+                                <img src="/assets/img/product/hashworks-eco3.svg" alt="hashworks">
+                                <p class="bodyLight">Collective efficiency of services utilization will avoid collusion and bring cost rationalization.
+                                        We believe in cournot model. Our customers will be able to consume key services at
+                                        a marginal cost </p>
+                        </div>
+                </div>
+        </div>
+        <div class="hashwork--whyhash">
+                <app-why-hashworks></app-why-hashworks>
+        </div>
+        <div class="hashworks--hashhelp">
+                <app-help></app-help>
+        </div>
+</div>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hashworks - Digital transformation | Blockchain | Cloud Adoption | DevOps | Data Science</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <meta name="keywords" content="Digital transformation,Website Development,App Development, Digital transformation company,Hashworks.co,Hashworks Pvt Ltd, UI/UX studio Bangalore, web application development, Mobile app development, DevOps Engineers, Performance Engineering Bangalore, Data Visualization experts, Dashboards, Enterprise startup, IT vendor for Captive IT, IT vendor for Enterprise, IT solutions company Bangalore, technology recruitment, IT sustainable innovation,  IT delivery organization, digital innovation IT vendor, Bangalore, India">
+  <meta name="description" content="Technology partners for Blockchain, Data Science, DevOps & Cloud. We help enterprises to build decentralized & distributed software services on Blockchain & Cloud native computing.">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+  <script src="https://unpkg.com/slick-carousel@1.6.0/slick/slick.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <meta name="Robots" content="index,follow">
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121441532-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121441532-1');
+</script>
+
+<script>
+  $('#loading').hide();
+
+  function UploadFile() {
+    var l = $('#fname').val().length && $('#lname').val().length && $('#email').val().length && $('#mobno').val().length &&
+      $('#attach').val().length;
+    if (l) {
+      $("#errormessage").hide()
+    } else {
+      $("#errormessage").show()
+      return false;
+    }
+    var reader = new FileReader();
+    var file = document.getElementById('attach').files[0];
+    reader.onload = function () {
+      document.getElementById('fileContent').value = reader.result;
+      document.getElementById('filename').value = file.name;
+
+      var url = "https://script.google.com/macros/s/AKfycbxSwL0Dq0l_wtAhqeIjBAmrKKkw8xCMQ9RiMGr6q_IhNa9cPCQ/exec";
+      $('#loading').show();
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: $("#uploadForm").serialize(),
+        success: function (data) {
+          $("#errormessage").hide();
+          $('#openpopup').trigger('click');
+          $("#uploadForm")[0].reset();
+          document.getElementById('filename1').innerHTML = "Upload Resume";
+          $('#loading').hide();
+          document.getElementById('closed').classList.remove("opened");
+
+        }
+      });
+    }
+    reader.readAsDataURL(file);
+  }
+
+  function testfunc(e) {}
+</script>
+
+</html>

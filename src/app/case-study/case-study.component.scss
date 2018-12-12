@@ -1,0 +1,72 @@
+h1,
+h2,
+h3,
+h4,
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.hashworks--cstudy {
+    .hashworks--help {
+        padding: 16px 0px 40px;
+    }
+    .hashworks--csfiltr {
+        padding-bottom: 0px;
+        max-height: 1125px;
+        overflow: hidden;
+        &--btn {
+            text-align: center;
+          display: flex;
+          justify-content: center;
+            margin: 16px 0px 40px;
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .hashworks--cstudy {
+        .hashworks--csfiltr {
+            max-height: 660px;
+        }
+        .hashworks--help {
+            padding: 40px 0px 40px;
+        }
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .hashworks--cstudy {
+        .hashworks--csfiltr {
+            padding-bottom: 0px;
+            max-height: 855px;
+            width: 940px;
+            margin: 0 auto;
+            &--btn {
+                // margin-top: 16px;
+                margin:22px 0px 56px;
+            }
+        }
+        .hashworks--help {
+            padding: 64px 0px 64px;
+        }
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    .hashworks--cstudy {
+        .hashworks--csfiltr {
+            padding-bottom: 0px;
+            max-height: 1060px;
+            width: 1170px;
+            &--btn {
+                // margin-top: 26px;
+                margin:30px 0px 56px;
+            }
+        }
+        .hashworks--help {
+            padding: 80px 0px 80px;
+        }
+    }
+}

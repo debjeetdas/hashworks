@@ -1,0 +1,203 @@
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+.hashworks--boot {
+    .hashworks--exService {
+        text-align: center;
+        .buttonColor{
+            width: 199px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        &--list {
+            li {
+                cursor: pointer;
+                outline: none;
+                border-bottom: 1px solid #eaeaea;
+                margin: 0;
+                padding: 14px 20px;
+            }
+            .active {
+                color: #603c96;
+            }
+        }
+    }
+    .hashworks--flList {
+        padding: 28px 8px 0px;
+        text-align: left;
+        .filterimage {
+            background-repeat: no-repeat;
+            height: 260px;
+            background-size: cover;
+            background-position: center;
+            padding: 10px 6px 0px 10px;
+        }
+        .cardhover{
+            position: relative;
+            transition: all .3s ease;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.01);
+            }
+        }
+        .knowMore{
+            position: absolute;
+            bottom: 25px;
+        }
+        h1,
+        h2,
+        p {
+            color: #ffffff;
+        }
+        h1{
+            padding: 37px 0px 8px;
+            line-height: 1.5;
+        }
+        p{
+            padding-bottom: 13px;
+            line-height: 1.5;
+        }
+        .devops {
+            margin: 0px 0px 16px;
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .hashworks--boot {
+        .hashworks--flList {
+            padding: 48px 34px 0px;
+            .filterimage {
+                height: 230px;
+                padding:14px 27px 12px 12px;
+            }
+            h1{
+                padding: 21px 0px 4px;
+            }
+            p{
+                padding-bottom: 19px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .active{
+        color: red;
+    }
+    .hashworks--boot {
+        .hashworks--exService {
+           
+            &--list {
+                border: none;
+                box-shadow: none;
+                border-top: 1px solid #eaeaea;
+                border-bottom: 1px solid #eaeaea;
+                display: flex;
+                justify-content:center;
+                padding: 28px 24px 25px 28px;
+                width: 940px;
+                margin: 0px auto;
+                li {
+                    padding: 0px;
+                    border: none;
+                    &:hover {
+                        color: #603c96;
+                    }
+                }
+            }
+
+            h2,
+            p {
+                text-align: left;
+            }
+            li:nth-child(1) {
+                padding: 0px 24px 0px 0px;
+            }
+            li:nth-child(2) {
+                border-right: 1px solid #eaeaea;
+                border-left: 1px solid #eaeaea;
+                padding: 0px 24px 0px 24px
+            }
+            li:nth-child(3) {
+                padding: 0px 24px 0px 24px;
+                border-right: 1px solid #eaeaea;
+            }
+            li:nth-child(4) {
+                padding: 0px 24px 0px 24px;
+            }
+        }
+        .hashworks--flList {
+            padding: 64px 0px 0px;
+            width: 940px;
+            margin: 0 auto;
+            .filterimage {
+                height: 312px;
+                padding:24px 42px 24px 24px;
+            }
+            h1{
+                padding: 46px 0px 16px;
+            }
+            p{
+                padding-bottom: 29px;
+            }
+            .devops {
+                margin: 0px 0px 46px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    .hashworks--boot {
+        .hashworks--exService {
+            &--list {
+                padding: 28px 24px 25px 34px;
+                width: 1168px;
+            }
+            li:nth-child(1) {
+                padding: 0px 32px 0px 0px;
+            }
+            li:nth-child(2) {
+                padding: 0px 32px 0px 32px
+            }
+            li:nth-child(3) {
+                padding: 0px 32px 0px 32px;
+            }
+            li:nth-child(4) {
+                padding: 0px 32px;
+            }
+            // li:nth-child(5) {
+            //     padding: 0px 32px 0px 32px;
+            // }
+        }
+        .hashworks--flList {
+            padding: 48px 0px 0px;
+            width: 1170px;
+            margin: 0 auto;
+            .filterimage {
+                height: 387px;
+                padding:32px 42px 32px 32px;
+                // &:hover {
+                //     padding:32px 42px 32px 32px;
+                // }
+            }
+            h1{
+                padding: 48px 0px 24px;
+            }
+            p{
+                padding-bottom: 40px;
+            }
+            .devops {
+                margin: 0px 0px 54px;
+            }
+        }
+    }
+}

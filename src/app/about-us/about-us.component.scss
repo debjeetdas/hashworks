@@ -1,0 +1,114 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.hashworks--about{
+    .hashworks--grewsmry{
+        padding: 32px 38px 32px 42px;
+        border-bottom: 1px solid  #eaeaea;
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            padding-top: 16px;
+        }
+    }
+    .lastborder{
+        border: none;
+    }
+    .hashworks--gallery{
+        width: 295px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 7px 5px;
+        grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+      img{
+        width: 145px;
+        height: 93px;
+      }  
+    }
+    .hashworks--join{
+        padding: 32px 0px 16px;
+    }
+    .hashworks--help{
+        padding-bottom: 40px;
+    }
+}
+@media only screen and (min-width:768px){
+    .hashworks--about{
+        .hashworks--grewsmry{
+            padding: 48px 100px 48px 100px;
+        }
+        .hashworks--gallery{
+            width: 700px;
+            grid-gap: 17px 20px;
+            grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+          img{
+            width: 340px;
+            height: 217px;
+          }  
+        }
+        .hashworks--join{
+            padding: 40px 0px 40px;
+        }
+        .hashworks--help{
+            padding-bottom: 40px;
+        }
+    } 
+}
+@media only screen and (min-width:1024px){
+    .hashworks--about{
+        .hashworks--grewsmry{
+            padding: 64px 0px 64px 0px;
+            width: 786px;
+            margin: 0 auto;
+        p{
+            padding-top: 24px;
+        }
+        }
+        .hashworks--gallery{
+            width: 940px;
+            grid-gap: 18px 20px;
+            grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+          img{
+            width: 460px;
+            height: 293px;
+          }  
+        }
+        .hashworks--join{
+            padding: 64px 0px;
+        }
+        .hashworks--help{
+            padding-bottom: 66px;
+        }
+    } 
+}
+@media only screen and (min-width:1440px){
+    .hashworks--about{
+        .hashworks--grewsmry{
+            width: 970px;
+            margin: 0 auto;
+            padding: 80px 0px 80px 0px;
+        }
+        .hashworks--gallery{
+            width: 1170px;
+            grid-gap: 21px 30px;
+            grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
+          img{
+            width: 570px;
+             height: 364px;
+          }  
+        }
+        .hashworks--join{
+            padding: 80px 0px;
+        }
+        .hashworks--help{
+            padding-bottom: 80px;
+        }
+    } 
+}

@@ -1,0 +1,13 @@
+
+<div class="home__service">
+  <h1 class ="title">{{titleText}}</h1>
+  <h3 class="bodyLight" *ngIf="titleSummary != ''">{{titleSummary}}</h3>
+  <div class="homeService">
+    <div class="home__service__details" (click)="routePage($event,item.type,item.title)" *ngFor="let item of serviceList; let i = index;" (mouseover)="hovered=i" (mouseleave)="hovered=-1">
+      <div [ngStyle]="{'background-image': hovered != i ? 'url('+item.activeImage+')' : 'url('+item.hoverImage+')'}" class="home__service__image home__service__active-image"></div>
+      <h2 class ="subTitle">{{item.title}}</h2>
+      <p class="bodyLight hovertext">{{item.summaryText}}</p>
+      <img class="arrow" src="/assets/img/home/service/Arrow.svg"/>
+    </div>
+  </div>
+</div>

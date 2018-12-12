@@ -1,0 +1,174 @@
+<div class="hashworks--bdetails">
+  <app-banner *ngFor="let item of bootcamp;" titleText="{{item.heroTest}}" text="{{item.bannerText}}"></app-banner>
+  <div class="hashworks--bnr" *ngFor="let duration of bootcamp;">
+    <h1 class="bodyBold">{{duration.durationtitle}}</h1>
+    <div class="hashworks--bnr--durtion">
+      <div class="specifics">
+        <div class="enroll">
+          <img src="/assets/img/botcamp/icon/hashworks-time.svg" alt="">
+          <p class="bodyLight">{{duration.time}}</p>
+        </div>
+        <div class="enroll">
+          <img src="/assets/img/botcamp/icon/hashworks--inter.svg" alt="">
+          <p class="bodyLight"> {{duration.intermediate}}</p>
+        </div>
+      </div>
+      <div class="specifics">
+        <div class="enroll">
+          <img src="/assets/img/botcamp/icon/hashworks--month.svg" alt="">
+          <p class="bodyLight">{{duration.month}}</p>
+        </div>
+        <div class="enroll">
+          <img src="/assets/img/botcamp/icon/hashworks--seat.svg" alt="">
+          <p class="bodyLight">{{duration.seat}}</p>
+        </div>
+      </div>
+      <div class="specifics">
+        <div class="enroll">
+          <img src="/assets/img/botcamp/icon/hashworks--place.svg" alt="">
+          <p class="bodyLight">{{duration.place}}</p>
+        </div>
+        <div class="enroll">
+          <img src="/assets/img/botcamp/icon/hashworks--user.svg" alt="">
+          <p class="bodyLight">{{duration.date}}</p>
+        </div>
+      </div>
+      <div class="knowMore">
+        <button class="button" (click)="openModal(template)">
+          <span>
+            <img class="arow" src="../../assets/img/home/service/hashworks-blkarw.svg" alt="">
+          </span>
+          <span>Enroll Now</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <section class="hashworks--course" *ngFor="let course of bootcamp;">
+    <h1 class="title">{{course.course}}</h1>
+    <p class="bodyLight">{{course.coursetext}}</p>
+    <p class="bodyLight">{{course.coursetext1}}</p>
+    <div *ngFor="let course1 of courseDetails">
+      <h2 class="bodyBold">{{course1.coursetitle}}</h2>
+      <p class="bodyLight">{{course1.coursetitletext}}</p>
+    </div>
+  </section>
+  <!-- slick carousel -->
+  <div class="topic_align">
+  <div class="hashworks--topic">
+    <h1 *ngFor="let learn of bootcamp;" class="title">{{learn.learn}}</h1>
+    <div class="">
+      <ngx-slick class="carousel cardSlick" #slickModal="slick-modal" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of topics" class="slide">
+          <div class="cards">
+            <h2 class="subTitle">{{slide.title}}</h2>
+            <p class="bodyLight">{{slide.desc}}</p>
+          </div>
+        </div>
+      </ngx-slick>
+    </div>
+  </div>
+</div>
+  <!--End slick carousel -->
+  <div class="hashworks--accordian">
+    <h1 class="title" *ngFor="let x of bootcamp">{{x.curriculum}}</h1>
+    <accordion [closeOthers]="oneAtATime">
+      <accordion-group [ngClass]="'first'" *ngFor="let summary of introductionList; let i = index" is-open="openAccordions.coolAccordion">
+        <div accordion-heading class="arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="28" viewBox="0 0 15 28">
+            <defs>
+              <path id="a" d="M30.65 13.982l.315.314-13.669 13.669L16 26.668l12.686-12.686L16 1.296 17.296 0l13.669 13.668-.314.314z" />
+            </defs>
+            <use fill="#7A7979" fill-rule="evenodd" transform="translate(-16)" xlink:href="#a" />
+          </svg>
+          <h2 class="bodySemiBold">{{summary.header}}</h2>
+        </div>
+        <p class="bodyLight" *ngFor="let info of summary.value;">{{info}}</p>
+      </accordion-group>
+    </accordion>
+  </div>
+  <div class="hashworks--faq">
+    <accordion [closeOthers]="oneAtATime">
+      <h2 class="subTitle" *ngFor="let faq of bootcamp;">{{faq.faqtitle}}</h2>
+      <accordion-group *ngFor="let item of faqDetails; let i = index" is-open="openAccordions.coolAccordion">
+        <div accordion-heading class="arrow">
+          <h1 class="bodySemiBold">{{item.heading}}</h1>
+          <img src="/assets/img/botcamp/icon/hashworks-triangle.svg" alt="hashworks">
+        </div>
+        <p class="bodyLight" *ngFor="let faqlist of item.list;">{{faqlist}}</p>
+      </accordion-group>
+    </accordion>
+  </div>
+  <div class="hashworks--ask" *ngFor="let ask of bootcamp;">
+    <p class="bodyBold">{{ask.question}}</p>
+    <button class="buttonColor" [routerLink]="['/contact']">
+      <span>
+        <img src="../../assets/img/home/service/Arrow.svg" alt="">
+      </span>
+      <span>{{ask.btn}}</span>
+    </button>
+  </div>
+  <section class="hashworks--join">
+    <app-commonbanner titleText="Join our team today" btnUrl="/career" summaryText="" btnTitle="Explore" imageUrl="/assets/img/home/hashworks_join.jpg"></app-commonbanner>
+  </section>
+  <section class="hashworks--help">
+    <app-help></app-help>
+  </section>
+
+  <div class="">
+    <ng-template #template>
+      <div class="modal-header">
+        <h4 class="modal-title pull-let title subTitle">Advanced industry immersive datascience bootcamp</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">
+            <img id="closePopUp" src="/assets/img/icon/hashworks_cross.svg" alt="">
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="signupForm" id="bootcamp">
+          <input class="bodyLight " type="text" [ngClass]="{'errorValidator': !signupForm.controls['fname'].valid && signupForm.controls['fname'].touched}"
+            [(ngModel)]="firstName" formControlName="fname" placeholder="First Name">
+          <input class="bodyLight left" type="text" [ngClass]="{'errorValidator': !signupForm.controls['lname'].valid && signupForm.controls['lname'].touched}"
+            [(ngModel)]="lastName" formControlName="lname" placeholder="Last Name">
+          <input class="bodyLight " type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" [ngClass]="{'errorValidator': !signupForm.controls['email'].valid && signupForm.controls['email'].touched}"
+            [(ngModel)]="emailID" formControlName="email" placeholder="Email Id">
+
+          <input class="bodyLight left" type="number" [ngClass]="{'errorValidator': !signupForm.controls['mobileNumber'].valid && signupForm.controls['mobileNumber'].touched}"
+            [(ngModel)]="mobileno" formControlName="mobileNumber" placeholder="Phone Number">
+          <p class="bodyLight condition">By clicking "Apply", you confirm that you accept our
+            <span>Terms of Service.</span>
+          </p>
+          <div class="caution bodyRegular" *ngIf="showCaution">Please fill all the fields</div>
+          <div class="loginbutton">
+            <button type="submit" class="buttonColor" (click)="SubmitForm()">
+              <span>
+                <img src="../../assets/img/home/service/Arrow.svg" alt="">
+              </span>
+              <span>Enroll Now</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<button style="display:none" id="openpopup" (click)="openModala(template1)">open popup</button>
+<!-- thankyou poup -->
+<ng-template #template1 id="thankq">
+  <div class="modal-header">
+
+    <button type="button" [ngClass]="['cross']" class="close pull-right" aria-label="Close" (click)="modalRefe.hide()">
+      <span aria-hidden="true">
+        <img src="/assets/img/icon/hashworks_cross.svg" alt="">
+      </span>
+    </button>
+  </div>
+  <div class="hashworks--sign">
+    <img src="/assets/img/carrer/hashworks--sub.svg" alt="hashworks">
+  </div>
+  <div [ngClass]="['profile']" class="modal-body">
+    <h1 class="title">Thank you for registering!</h1>
+    <p class="bodyLight">we’ll get in touch with you soon</p>
+  </div>
+</ng-template>

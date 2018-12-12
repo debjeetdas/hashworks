@@ -1,0 +1,55 @@
+<div class="footer">
+  <div class="footer__tabs">
+    <div class="footer__tabs--list">
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/product']">Product</button>
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/service']">Services</button>
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/bootcamp']">Bootcamps </button>
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/casestudy']">Casestudies </button>
+      <a href="https://medium.com/hashworks" target="_blank">
+        <button class="footer__tabs__button bodyRegular foot"> Blog </button>
+      </a>
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/about']">About</button>
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/career']">Careers</button>
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/demo']">Demo </button>
+      <button class="footer__tabs__button bodyRegular foot" [routerLink]="['/contact']"> Contact Us</button>
+    </div>
+    <div class="footer__tabs__socialLink">
+      <a href="https://twitter.com/hashworksco" target="_blank">
+        <img src="/assets/img/icon/hashworks_twitter.svg" alt="">
+      </a>
+      <a href="https://www.linkedin.com/company/hashworks?trk=top_nav_home" target="_blank">
+        <img src="/assets/img/icon/hashworks_lnkdin.svg" alt="hashworks">
+      </a>
+      <a href="https://www.facebook.com/hashworks" target="_blank">
+        <img src="/assets/img/icon/hashworks_fb.svg" alt="hashworks">
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__news">
+    <h2 class="subTitle">Subscribe to our newsletter</h2>
+    <div class="footer__news__subscribe">
+      <form #subscribeForm="ngForm" style="position: relative;" id="subscriber">
+        <input type="text" ngModel [(ngModel)]="subscribedName" required #first="ngModel" name="SubscriberList" class="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+          placeholder="Email" />
+        <div class="error-wrapper" *ngIf="first.errors && (first.dirty || first.touched)">
+          <h3 class="notify caution bodyRegular" *ngIf="first.errors.required">Plese Enter Email</h3>
+          <h3 class="notify caution bodyRegular" *ngIf="first.errors.pattern">Please Enter valid Email to Subscribe </h3>
+
+        </div>
+        <h3 class="notify bodyRegular" id="subsAdded">Subscriber added successfully</h3>
+      </form>
+      <div class="knowMore">
+        <button class="buttonColor" (click)="SubmitForm()" id="submit-form">
+          <span>
+            <img src="../../assets/img/home/service/Arrow.svg" alt="">
+          </span>
+          <span>Subscribe</span>
+        </button>
+      </div>
+    </div>
+    <div class="copyright">
+      <p class="bodyLight">Copyright &#xa9; 2018 Hashworks.co</p>
+    </div>
+  </div>
+</div>

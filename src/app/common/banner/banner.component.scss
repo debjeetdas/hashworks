@@ -1,0 +1,60 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.hashworks_bnr{
+   padding: 64px 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+p{
+    padding-top: 8px;
+}
+    &__do{
+        padding: 0px 28px;
+        width:100%;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .hashworks_bnr{
+        padding: 80px 0px;
+    p{
+        padding-top: 8px;
+    }
+        &__do{
+            padding: 0px 140px;
+        }
+    }
+}
+@media only screen and (min-width:1024px){
+    .hashworks_bnr{
+        padding: 96px 0px;
+    p{
+        padding-top: 13px;
+    }
+        &__do{
+            padding: 0;
+        width: 770px;
+        margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (min-width:1440px){
+    .hashworks_bnr{
+        padding: 120px 0px;
+    p{
+        padding-top:24px;
+    }
+        &__do{
+            padding: 0px;
+            width: 770px;
+            margin: 0 auto;
+        }
+    }
+}

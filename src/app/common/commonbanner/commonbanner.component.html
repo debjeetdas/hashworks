@@ -1,0 +1,11 @@
+<div class="home__grew" [ngStyle]="{'background-image': 'url('+imageUrl+')'}">
+  <h1 class ="title">{{titleText}}</h1>
+  <p class="bodyLight" *ngIf="summaryText != ''">{{summaryText}}</p>
+
+  <div class="home__grew__button">
+      <button class="button" [routerLink]=[btnUrl] *ngIf="btnTitle != ''">
+        <span><img src="../../assets/img/home/service/hashworks-blkarw.svg" alt=""></span>
+        <span>{{btnTitle}}</span>
+      </button>
+    </div>
+</div>
